@@ -1,0 +1,88 @@
+{
+  "niches": [
+    {
+      "id": "dental",
+      "name": "Dental Clinics",
+      "icon": "🦷",
+      "search_queries": [
+        "dental clinic",
+        "dentist office",
+        "dental practice",
+        "family dentist",
+        "cosmetic dentist"
+      ],
+      "website_keywords": ["appointment", "booking", "patient", "dental", "teeth", "smile"],
+      "pain_points": [
+        "Missing after-hours calls",
+        "No online booking system",
+        "Outdated website design",
+        "No patient chat support"
+      ],
+      "pitch_angle": "AI receptionist that books appointments 24/7 and never misses a patient call"
+    },
+    {
+      "id": "law",
+      "name": "Law Firms",
+      "icon": "⚖️",
+      "search_queries": [
+        "law firm",
+        "attorney office",
+        "lawyer",
+        "legal practice",
+        "law office"
+      ],
+      "website_keywords": ["consultation", "case", "legal", "attorney", "practice areas", "client"],
+      "pain_points": [
+        "Missing potential client intake calls",
+        "Slow response to consultations",
+        "No 24/7 availability",
+        "Generic website with no engagement"
+      ],
+      "pitch_angle": "AI intake assistant that qualifies leads and schedules consultations automatically"
+    },
+    {
+      "id": "realestate",
+      "name": "Real Estate Agencies",
+      "icon": "🏠",
+      "search_queries": [
+        "real estate agency",
+        "real estate agent",
+        "property management",
+        "real estate broker",
+        "realty office"
+      ],
+      "website_keywords": ["listing", "property", "buy", "sell", "rent", "agent", "realtor"],
+      "pain_points": [
+        "Missing buyer inquiry calls",
+        "No instant response to listing questions",
+        "Leads going to competitors",
+        "No automated follow-up"
+      ],
+      "pitch_angle": "AI assistant that answers property questions instantly and captures buyer leads 24/7"
+    }
+  ],
+  "locations": {
+    "us": [
+      "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
+      "Phoenix, AZ", "San Antonio, TX", "San Diego, CA", "Dallas, TX",
+      "Austin, TX", "Miami, FL", "Atlanta, GA", "Denver, CO",
+      "Seattle, WA", "Boston, MA", "Nashville, TN", "Portland, OR",
+      "Las Vegas, NV", "Charlotte, NC", "San Francisco, CA", "Orlando, FL"
+    ],
+    "uk": [
+      "London", "Manchester", "Birmingham", "Leeds",
+      "Liverpool", "Bristol", "Edinburgh", "Glasgow",
+      "Cardiff", "Belfast"
+    ],
+    "australia": [
+      "Sydney, NSW", "Melbourne, VIC", "Brisbane, QLD",
+      "Perth, WA", "Adelaide, SA", "Gold Coast, QLD",
+      "Canberra, ACT", "Hobart, TAS"
+    ],
+    "middle_east": [
+      "Dubai, UAE", "Abu Dhabi, UAE", "Riyadh, Saudi Arabia",
+      "Doha, Qatar", "Kuwait City, Kuwait", "Manama, Bahrain",
+      "Muscat, Oman", "Amman, Jordan"
+    ]
+  }
+}
