@@ -425,5 +425,8 @@ if __name__ == "__main__":
         icon = "[OK]" if val else "[--]"
         print(f"    {icon} {key}: {val}")
     print()
-
-    app.run(host="0.0.0.0", port=Config.FLASK_PORT, debug=True)
+    
+    import os
+     
+    port = int(os.environ.get("PORT" ,10000))
+    app.run(host="0.0.0.0", port=port)
