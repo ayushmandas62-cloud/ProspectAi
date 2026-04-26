@@ -8,6 +8,7 @@ from datetime import datetime
 
 class Database:
     def __init__(self, db_path):
+    dir_name = os.path.dirname(db_path) if dir_name:
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         self.db_path = db_path
         self._init_db()
