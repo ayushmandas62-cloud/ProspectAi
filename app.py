@@ -10,11 +10,12 @@ import random
 from datetime import datetime
 from flask import Flask, request, jsonify, send_from_directory, Response
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.dirname(__file__))
+load_dotenv()
 
 from database.db import Database
-from scrapers.google_maps import GoogleMapsScraper
 from scrapers.geoapify_scraper import GeoapifyScraper
 from scrapers.directory_scraper import DirectoryScraper
 from scrapers.website_scraper import WebsiteScraper
@@ -28,9 +29,11 @@ CORS(app)
 
 # ── ENV CONFIG ───────────────────────────────────────────
 GEOAPIFY_API_KEY = os.getenv("GEOAPIFY_API_KEY")
-GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-DB_PATH = os.getenv("DB_PATH", "test.db")
+DB_PATH = os.getenv(
+    "DB_PATH",
+    os.path.join(os.path.dirname(__file__), "data", "leads.db"),
+)
 
 # ── INIT SERVICES ────────────────────────────────────────
 db = Database(DB_PATH)
@@ -39,7 +42,7 @@ website_scraper = WebsiteScraper()
 email_finder = EmailFinder()
 
 geoapify_scraper = GeoapifyScraper(GEOAPIFY_API_KEY) if GEOAPIFY_API_KEY else None
-maps_scraper = GoogleMapsScraper(GOOGLE_MAPS_API_KEY) if GOOGLE_MAPS_API_KEY else None
+maps_scraper = None
 directory_scraper = DirectoryScraper()
 gemini = GeminiEnricher(GEMINI_API_KEY) if GEMINI_API_KEY else None
 
